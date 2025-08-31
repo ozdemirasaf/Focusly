@@ -3,6 +3,7 @@ const colors = {
   other: "#E62727",
   background: "#F3F2EC",
   text: "#DCDCDC",
+  white : "#fff"
 };
 
 export default colors;

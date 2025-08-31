@@ -1,12 +1,15 @@
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
-import { Text } from "react-native";
 
-export default function WeekCard({day} : {day : string}) {
+interface WeekCard {
+    day: string,
+}
+
+export default function WeekCard({ day }: WeekCard) {
 
     return (
-        <SafeAreaProvider style={styles.container}>
-            <Text>{day}</Text>
-        </SafeAreaProvider>
+        <TouchableOpacity style={styles.container}>
+            <Text style={styles.dayTitle}>{day}</Text>
+        </TouchableOpacity>
     )
 }
