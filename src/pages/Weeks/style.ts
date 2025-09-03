@@ -9,8 +9,8 @@ export default StyleSheet.create({
     },
 
     content: {
-        flex: 1,              // tüm ekranı doldur
-        justifyContent: "center", // dikey ortala
-        gap: 20,                  // kartlar arası boşluk
+        flex: 1,
+        marginTop: 23,
+        gap: 20
     },
 });

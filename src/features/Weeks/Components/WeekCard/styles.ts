@@ -3,9 +3,8 @@ import colors from "../../../../app/Theme/colors";
 
 export default StyleSheet.create({
     container: {
-        width: "100%",             // tam genişlik
         backgroundColor: colors.primary,
-        padding: 25,
+        padding: 20,
         borderRadius: 15,
     },
 

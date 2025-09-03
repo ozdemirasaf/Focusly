@@ -5,6 +5,8 @@ import style from "./style";
 import WeekCard from "../../features/Weeks/Components/WeekCard";
 import days from "../../features/Weeks/Data/day";
 
+const GAP = 23;
+
 export default function Weeks() {
     return (
         <SafeAreaProvider style={style.container}>
@@ -12,8 +14,14 @@ export default function Weeks() {
                 data={days}
                 keyExtractor={(item) => item.id.toString()}
                 scrollEnabled={false}
-                renderItem={({ item }) => <WeekCard day={item.name} />}
-                contentContainerStyle={style.content}
+                renderItem={({ item }) => (
+                    <WeekCard day={item.name} /> // Kart boyları orijinal
+                )}
+                contentContainerStyle={{
+                    gap: GAP,
+                    flexGrow: 1,
+                    paddingVertical: GAP / 1,
+                }}
             />
         </SafeAreaProvider>
     );
