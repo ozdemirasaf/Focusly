@@ -10,6 +10,7 @@ import colors from "../Theme/colors";
 
 import Weeks from "../../pages/Weeks/Weeks";
 import Tasks from "../../pages/Tasks";
+import DayScreens from "../../pages/Days";
 
 
 enableScreens();
@@ -18,15 +19,16 @@ const Stack = createNativeStackNavigator();
 
 
 function StackWeeks() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen 
-        name="Weeks" 
-        component={Weeks} 
-        options={{ headerTitle : "Haftalar"}} 
-      />
-    </Stack.Navigator>
-  );
+    return (
+        <Stack.Navigator>
+            <Stack.Screen
+                name="Weeks"
+                component={Weeks}
+                options={{ headerTitle: "Haftalar" }}
+            />
+            <Stack.Screen name="DayScreen" component={DayScreens} /> {/* ✅ ekran ismi DayScreen */}
+        </Stack.Navigator>
+    );
 }
 
 
@@ -54,7 +56,7 @@ export default function Navigations() {
                     tabBarStyle: styles.tabBar
                 })}
             >
-                <Tab.Screen name="Tasks"  component={Tasks} options={{headerTitle : "Görevler", tabBarLabel: 'Görevler'   }} />
+                <Tab.Screen name="Tasks" component={Tasks} options={{ headerTitle: "Görevler", tabBarLabel: 'Görevler' }} />
                 <Tab.Screen
                     name="Week"
                     component={StackWeeks}
