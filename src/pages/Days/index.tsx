@@ -1,10 +1,8 @@
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import React from "react";
 import DayScreen from "../../features/DayScreens/Components/DayScreen";
 
 export default function Days(props: any) {
-    return (
-        <SafeAreaProvider>
-            <DayScreen {...props} />
-        </SafeAreaProvider>
-    );
+    console.log(props);
+
+    return <DayScreen {...props} />;
 }

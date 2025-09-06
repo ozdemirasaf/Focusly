@@ -1,4 +1,4 @@
 export type RootStackParamList = {
     Weeks: undefined;
-    DayScreen: { day: string }; // ✅ ekran ismi DayScreen
+    Days: { day: string }; // ✅ ekran ismi DayScreen
 };

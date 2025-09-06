@@ -10,7 +10,8 @@ import colors from "../Theme/colors";
 
 import Weeks from "../../pages/Weeks/Weeks";
 import Tasks from "../../pages/Tasks";
-import DayScreens from "../../pages/Days";
+import Days from "../../pages/Days";
+import CustomHeader from "../../features/DayScreens/Components/CustomHeader";
 
 
 enableScreens();
@@ -26,7 +27,13 @@ function StackWeeks() {
                 component={Weeks}
                 options={{ headerTitle: "Haftalar" }}
             />
-            <Stack.Screen name="DayScreen" component={DayScreens} /> {/* ✅ ekran ismi DayScreen */}
+            <Stack.Screen
+                name="Days"
+                component={Days}
+                options={({ route }) => ({
+                    header: () => <CustomHeader day={(route.params as { day: string }).day} />,
+                })}
+            />
         </Stack.Navigator>
     );
 }

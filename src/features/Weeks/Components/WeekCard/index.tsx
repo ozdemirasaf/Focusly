@@ -12,7 +12,7 @@ export default function WeekCard({ day }: WeekCardProps) {
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
     const handlePress = () => {
-        navigation.navigate("DayScreen", { day }); // ✅ ekran ismi DayScreen
+        navigation.navigate("Days", { day }); // ✅ ekran ismi DayScreen
     };
 
     return (

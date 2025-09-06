@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { RouteProp } from "@react-navigation/native";
 import type { RootStackParamList } from "../../../../app/Types/types";
 
-type DayScreenRouteProp = RouteProp<RootStackParamList, "DayScreen">;
+type DayScreenRouteProp = RouteProp<RootStackParamList, "Days">;
 
 interface Props {
     route: DayScreenRouteProp;
